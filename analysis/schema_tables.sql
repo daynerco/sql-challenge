@@ -46,7 +46,7 @@ DROP TABLE dept_managers
 
 CREATE TABLE dept_managers (
     dept_no VARCHAR(20) NOT NULL,
-    emp_no INT(20),
+    emp_no INT,
     FOREIGN KEY (dept_no) REFERENCES departments(dept_no),
     FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
@@ -57,7 +57,7 @@ SELECT * FROM dept_managers
 DROP TABLE SALARIES
 
 CREATE TABLE salaries (
-    emp_no INT(20),
+    emp_no INT,
     salary INT NOT NULL,
     FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
@@ -68,7 +68,7 @@ SELECT * FROM salaries
 
 DROP TABLE TITLES
 CREATE TABLE titles (
-    emp_no VARCHAR(20) NOT NULL,
+    emp_no INT NOT NULL,
     title VARCHAR(100) NOT NULL,
     FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
